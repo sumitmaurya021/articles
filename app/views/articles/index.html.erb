@@ -1,0 +1,15 @@
+<h1 class="text-center bg-dark text-light p-3 index-header">All Articles</h1>
+<div class="container">
+<ul class="row">
+    <% @articles.each_with_index do |article| %>
+    <li class="article col-12 mt-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <h1><%= article.id %>.</h1>
+            <h1 class="title-article"><%= article.title %></h1>
+        </div>
+        <p class="p-3 index-article"><%= article.description %></p>
+    </li>
+    <div class="line"></div>
+    <% end %>
+</ul>
+</div>
